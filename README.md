@@ -1,2 +1,2 @@
 # phylogenomics
-## These script will help to find the core genomes of apicomplexa and visualize different types of phylogenomic analysis
+## These scripts will help to find the core genomes of apicomplexa and visualize different types of phylogenomic analysis
