@@ -3,6 +3,7 @@
 #sed -i '/^>/ s/_.*//' *.fa #Remove everything after 1st "_" to make all the names same
 for f in *.fa; do awk '/^>/{f=!d[$1];d[$1]=1}f' $f > $f.nodup; done # remove duplicate before concatanation
 #Line 6-14 will concatanate fasta files side by side, line 15-18 will fix the alignment, header and remove blank lines 
+#Line 6-14 is based on a csh script from Kazutaka Katoh <katoh@biken.osaka-u.ac.jp>  
 for i in *nodup;
         do awk '/>/{print "\n" $0} $1!~/>/{printf $0} END{print "\n"}' $i > $i.oneline
 done
