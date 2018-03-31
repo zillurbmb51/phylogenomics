@@ -14,6 +14,7 @@ for i in *.oneline;
                 mv pasted result
 done
 rm *.oneline
+#Next three lines for tiding up the header lines
 sed -e 's/\(>\).*\(>\)/\1\2/'g result > result_test_1.fa
 sed -i 's/>>/>/' result_test_1.fa
 sed -i '/^$/d' result_test_1.fa
